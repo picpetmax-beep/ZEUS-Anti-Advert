@@ -1,0 +1,26 @@
+name: ZEUSAntiAdvert
+version: 1.0.0
+main: ir.zeus.antiadvert.ZEUSAntiAdvert
+api-version: '1.21'
+author: ZEUS
+description: Automatic advertisement filter, warnings and timed mute.
+commands:
+  warnings:
+    description: View a player's automatic warning count.
+    usage: /warnings <player>
+    permission: zeus.antiadvert.admin
+  clearwarns:
+    description: Clear a player's warning count.
+    usage: /clearwarns <player>
+    permission: zeus.antiadvert.admin
+  zeusfilter:
+    description: Reload ZEUS Anti-Advert configuration.
+    usage: /zeusfilter reload
+    permission: zeus.antiadvert.admin
+permissions:
+  zeus.antiadvert.bypass:
+    description: Bypass the advertisement filter and automatic mute.
+    default: op
+  zeus.antiadvert.admin:
+    description: Manage the advertisement filter.
+    default: op

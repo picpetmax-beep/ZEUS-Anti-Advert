@@ -1,0 +1,31 @@
+# ZEUS Anti-Advert configuration
+warnings-before-mute: 3
+mute-duration-minutes: 30
+
+# Messages are configurable. MiniMessage formatting is supported.
+messages:
+  prefix: "<gradient:#ffc000:#fff0a0><bold>ZEUS</bold></gradient> <dark_gray>»</dark_gray> "
+  blocked: "<red>Your message was blocked: advertising is not allowed."
+  warning: "<yellow>Advertising warning <white><count>/<max></white>. Stop posting links or server ads."
+  muted: "<red>You received 3 warnings. You are muted for <duration> minutes."
+  still-muted: "<red>You are muted for another <time>."
+  expired: "<green>Your mute has expired and your warnings have been reset."
+  no-permission: "<red>You don't have permission."
+  usage: "<yellow>Usage: <white><usage>"
+  warnings: "<gold><player></gold> has <yellow><count></yellow> warning(s)."
+  cleared: "<green>Warnings cleared for <white><player></white>."
+  reload: "<green>Configuration reloaded."
+
+# URLs, IP addresses, Discord invites, and server-address patterns are detected automatically.
+# Add custom terms here (case-insensitive substring matching).
+blocked-words:
+  - "join my server"
+  - "come to my server"
+  - "سرور من"
+  - "بیاید سرور"
+  - "ادد کن"
+  - "discord.gg"
+
+# Extra patterns are Java regular expressions. Do not add untrusted regex patterns.
+extra-regex:
+  - "(?i)\\b(?:play\\.)?[a-z0-9-]{2,}\\.(?:com|net|org|gg|xyz|ir|me| fun|tk)(?::[0-9]{1,5})?\\b"
